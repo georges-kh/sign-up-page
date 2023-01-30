@@ -1,0 +1,56 @@
+:root {
+  --image-width: 35%;
+}
+
+body {
+  background: rgb(27, 16, 34);
+  font-family: "Oswald", sans-serif;
+}
+
+.container {
+  border: 1px solid red;
+  box-sizing: border-box;
+  width: 800px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background: white;
+  /* CENTER THE CONTAINER*/
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  /* CENTER THE CONTAINER*/
+}
+
+.image-container {
+  width: var(--image-width);
+  height: 100%;
+  /* BACKGROUND PROPERTIES*/
+  background-image: url(sign-up-page-assets/sign-up-image.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* BACKGROUND PROPERTIES*/
+}
+
+.form-container {
+  width: calc(100% - var(--image-width));
+  height: 100%;
+  background: rgb(248, 248, 248);
+  font-size: 0.5rem;
+  padding: 100px 5px;
+}
+
+form section.text-section {
+  font-size: 0.8rem;
+}
+
+
+form section.form-section {
+  background: white;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
