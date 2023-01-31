@@ -1,56 +1,116 @@
 :root {
-  --image-width: 35%;
+  --form-padding: 15px 35px;
 }
 
 body {
-  background: rgb(27, 16, 34);
   font-family: "Oswald", sans-serif;
+  font-size: 1em;
+  background: rgb(5, 12, 5);
 }
 
 .container {
-  border: 1px solid red;
-  box-sizing: border-box;
-  width: 800px;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  background: white;
-  /* CENTER THE CONTAINER*/
+  /* Center the div */
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
-  /* CENTER THE CONTAINER*/
+  /* Center the div */
+  width: 800px;
+  height: 100vh;
+  background: rgb(248, 248, 248);
+  display: flex;
 }
 
 .image-container {
-  width: var(--image-width);
-  height: 100%;
-  /* BACKGROUND PROPERTIES*/
-  background-image: url(sign-up-page-assets/sign-up-image.jpg);
-  background-position: center;
-  background-size: cover;
+  flex: 1.5;
+  position: relative;
+  /* Background */
+  background-image: url(sign-up-page-assets/unnamed.jpg);
   background-repeat: no-repeat;
-  /* BACKGROUND PROPERTIES*/
+  background-size: cover;
+  background-position: right;
+  /* Background */
+}
+
+.logo {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background: white;
+  position: absolute;
+  top: 20%;
+  text-align: center;
 }
 
 .form-container {
-  width: calc(100% - var(--image-width));
-  height: 100%;
-  background: rgb(248, 248, 248);
-  font-size: 0.5rem;
-  padding: 100px 5px;
+  font-size: 0.8em;
+  flex: 2;
+  padding: 20px 0;
 }
 
-form section.text-section {
-  font-size: 0.8rem;
+.text-section {
+  font-size: 1em;
+  font-weight: 500;
+  padding: var(--form-padding);
 }
 
-
-form section.form-section {
+.form-section {
+  width: 100%;
   background: white;
   border: none;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: var(--form-padding);
+}
+
+.form-section h4 {
+  /* Pushes everything else onto a new line */
+  width: 100%;
+  margin: 0;
+}
+
+.form-section label {
+  display: block;
+  font-size: 0.7em;
+}
+
+.form-section input {
+  font-size: 0.8em;
+  margin: 0;
+  padding: 0.3em;
+  width: 160px;
+  border: none;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+}
+
+input:focus {
+  border: none;
+}
+
+.confirm {
+  padding: var(--form-padding);
+}
+
+.confirm button {
+  font-size: 0.8em;
+  border: none;
+  border-radius: 0.3em;
+  padding: 8px 30px;
+  background: black;
+  color: white;
+}
+
+.login {
+  font-size: 0.9em;
+}
+
+.login a {
+  text-decoration: none;
+  color: blue;
 }
