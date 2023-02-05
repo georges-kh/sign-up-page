@@ -11,7 +11,13 @@ const patterns = {
 }
 
 function validate(field, regex) {
-  if (regex.test(field.value)) {
+  // checks if password was confirmed
+  if (field.name === "user_password_confirm") {
+    if (field.value === inputs.item(inputs.length - 2).value) {
+      field.className = "valid";
+    }
+  // adds class of valid or invalid
+  } else if (regex.test(field.value)) {
     field.className = "valid";
   } else {
     field.className = "invalid";
