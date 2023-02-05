@@ -1,5 +1,5 @@
 :root {
-  --form-padding: 15px 35px;
+  --form-padding: 10px 35px;
 }
 
 body {
@@ -23,11 +23,13 @@ body {
   display: flex;
 }
 
+
+/* IMAGE CONTAINER */
 .image-container {
   flex: 1.5;
   position: relative;
   /* Background */
-  background-image: url(sign-up-page-assets/unnamed.jpg);
+  background-image: url(sign-up-page-assets/sign-up-image.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
@@ -36,18 +38,34 @@ body {
 
 .logo {
   width: 100%;
-  height: 50px;
+  height: 80px;
+  padding: 10px 0;
   line-height: 50px;
-  background: white;
+  background: rgba(0, 0, 0, 0.5);
   position: absolute;
   top: 20%;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.logo p {
+  font-size: 4em;
+  color: white;
+  margin-left: 5px;
+}
+
+.logo img {
+  height: 80px;
+}
+/* IMAGE CONTAINER */
+
+
+/* FORM CONTAINER */
 .form-container {
   font-size: 0.8em;
   flex: 2;
-  padding: 20px 0;
 }
 
 .text-section {
@@ -76,11 +94,17 @@ body {
 
 .form-section label {
   display: block;
-  font-size: 0.7em;
+  font-size: 1em;
+}
+
+.form-section > p {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
 }
 
 .form-section input {
-  font-size: 0.8em;
+  font-size: 0.9em;
   margin: 0;
   padding: 0.3em;
   width: 160px;
@@ -90,8 +114,36 @@ body {
 }
 
 input:focus {
-  border: none;
+  outline: none;
+  box-shadow: 0 5px 4px rgb(58, 95, 11, 0.8);
 }
+
+/* VALIDATION STYLES */
+input.valid {
+  border: 2px solid rgb(58, 95, 11);
+  border-radius: 5px;
+}
+
+input.invalid {
+  border: 2px solid rgb(187, 50, 50);
+  border-radius: 5px;
+}
+
+input + span {
+  font-size: 0.9em;
+  font-family: inherit;
+  color: rgb(187, 50, 50);
+  margin-top: 8px;
+  opacity: 0;
+  height: 0;
+}
+
+input.invalid + span {
+  opacity: 1;
+  height: auto;
+}
+
+/* VALIDATION STYLES */
 
 .confirm {
   padding: var(--form-padding);
@@ -102,8 +154,13 @@ input:focus {
   border: none;
   border-radius: 0.3em;
   padding: 8px 30px;
-  background: black;
+  background: rgb(58, 95, 11);
   color: white;
+  cursor: pointer;
+}
+
+.confirm button:hover {
+  background:rgba(58, 95, 11, 0.8);
 }
 
 .login {
@@ -112,5 +169,10 @@ input:focus {
 
 .login a {
   text-decoration: none;
-  color: blue;
+  color: rgb(58, 95, 11);
 }
+
+login a:hover {
+  color: rgba(58, 95, 11, 0.8);
+}
+/* FORM CONTAINER */
